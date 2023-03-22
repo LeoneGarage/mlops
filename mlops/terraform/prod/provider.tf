@@ -4,7 +4,7 @@ terraform {
   // for storing Terraform state in an AWS S3 bucket. You can run the setup scripts in mlops-setup-scripts/terraform to
   // provision the S3 bucket referenced below and store appropriate credentials for accessing the bucket from CI/CD.
   backend "s3" {
-    bucket         = "mlops-tfstate"
+    bucket         = "databricks-leone"
     key            = "prod.terraform.tfstate"
     dynamodb_table = "mlops-tfstate-lock"
     region         = "us-east-1"
