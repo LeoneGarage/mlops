@@ -5,8 +5,8 @@ terraform {
   // provision the S3 bucket referenced below and store appropriate credentials for accessing the bucket from CI/CD.
   backend "s3" {
     bucket         = "databricks-leone"
-    key            = "prod.terraform.tfstate"
-    dynamodb_table = "mlops-tfstate-lock"
+    key            = "prod/terraform/tfstate"
+    # dynamodb_table = "mlops-tfstate-lock"
     region         = "us-west-2"
   }
   required_providers {
